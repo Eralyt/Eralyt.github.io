@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/ns.svg">
+    <title>Ns Documentation</title>
+    <link rel=" stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>2html</h1>
+        <p>Turns formatted text into html</p>
+      </header>
+      <div class="section">
+<h2>Paragraphes</h2>
+<p>
+Les paragraphes sont détectés automatiquement. Ce sont les blocs de caractères ne comprenant aucun retour chariot. Un passage à la ligne à l'intérieur d'un paragraphe peut être forcé par la balise isolée <b>¤br¤</b> . Voici un exemple ci-dessous avec son rendu.
+</p>
+
+<p>
+<b>Texte</b> :
+</p>
+
+<p class='ignore'>
+Voici un premier paragraphe.<br>Voici un second paragraphe. Toute portion de texte débutant sur une ligne est considérée automatiquement comme un paragraphe s'achevant au premier retour chariot rencontré. Si on veut forcer un passage à la ligne à l'intérieur d'un paragraphe, il faut alors insérer la balise "br" suivante :  ¤br¤ pour se retrouver à la ligne suivante au sein du paragraphe...<br>Voici un troisième paragraphe.
+</p>
+
+<p>
+<b>Rendu</b> :
+</p>
+
+<p>
+Voici un premier paragraphe.
+</p>
+
+<p>
+Voici un second paragraphe. Toute portion de texte débutant sur une ligne est considérée automatiquement comme un paragraphe s'achevant au premier retour chariot rencontré. Si on veut forcer un passage à la ligne à l'intérieur d'un paragraphe, il faut alors insérer la balise "br" suivante : <br> pour se retrouver à la ligne suivante au sein du paragraphe...
+</p>
+
+<p>
+Voici un troisième paragraphe.
+</p>
+
+<hr>
+<h2>Formatage de groupes de mots</h2>
+<p>
+Pour formater des goupes de mots, on pourra utiliser les balises fermantes suivantes :
+</p>
+
+<ul>
+<li><span class='cs'>¤b¤</span> : texte <b>en gras</b>.</li>
+<li><span class='cs'>¤i¤</span> : texte <i>en italique</i>.</li>
+<li><span class='cs'>¤u¤</span> : texte <u>souligné</u>.</li>
+<li><span class='cs'>¤c¤</span> : texte présenté <span class='c'>sous forme de code</span>.</li>
+<li><span class='cs'>¤cs¤</span> : texte présenté <span class='cs'>sous forme de code type console</span>.</li>
+</ul>
+
+<p>
+Voici un exemple ci-dessous avec son rendu.
+</p>
+
+<p>
+<b>Texte</b> :
+</p>
+
+<p class='ignore'>
+Voici un texte avec des mots ¤u¤soulignés¤u¤, d'autres ¤i¤en italique¤i¤, d'autres ¤b¤en gras¤b¤, d'autres ¤b¤¤i¤en gras et en italique¤i¤¤b¤ ou encore ¤u¤¤i¤en italique et soulignés¤i¤¤u¤ ou encore du code "en ligne" : ¤c¤./2html test.2html¤c¤ ou du code type "console" : ¤cs¤npx create-react-app mon-app¤cs¤ .
+</p>
+
+<p>
+<b>Rendu</b> :
+</p>
+
+<p>
+Voici un texte avec des mots <u>soulignés</u>, d'autres <i>en italique</i>, d'autres <b>en gras</b>, d'autres <b><i>en gras et en italique</i></b> ou encore <u><i>en italique et soulignés</i></u> ou encore du code "en ligne" : <span class='c'>./2html test.2html</span> ou du code type "console" : <span class='cs'>npx create-react-app mon-app</span> .
+</p>
+
+<hr>
+<h2>Liens</h2>
+<p>
+Pour insérer un lien hypertexte on utilisera la balise <span class='cs'>¤l¤</span> ainsi : <span class='cs'>¤l¤texte du lien¤adresse du lien¤</span> .
+</p>
+
+<p>
+L'indication du protocole <span class='cs'>https://</span> est facultative : si l'adresse du lien est simplement indiquée par <span class='cs'>google.com</span>, elle sera alors automatiquement transformée en <span class='cs'>https://google.com</span>.
+</p>
+
+<p>
+Voici un exemple ci-dessous avec son rendu.
+</p>
+
+<p>
+<b>Texte</b> :
+</p>
+
+<p class='ignore'>
+Voici un lien vers le ¤l¤site de Google¤google.com¤ et un autre vers le ¤l¤site MDN de Mozilla¤https://developer.mozilla.org/fr/¤.
+</p>
+
+<p>
+<b>Rendu</b> :
+</p>
+
+<p>
+Voici un lien vers le <a href='https://google.com' target='_blank'>site de Google</a> et un autre vers le <a href='https://developer.mozilla.org/fr/' target='_blank'>site MDN de Mozilla</a>.
+</p>
+
+<hr>
+<h2>Listes</h2>
+<p>
+Pour introduire une liste à puce ou une liste numérotée on utilisera respectivement les balises <span class='cs'>¤ul¤</span> et <span class='cs'>¤ol¤</span> fermées simplement par <span class='cs'>¤</span> . A l'intérieur on dispose simplement chaque item sur une nouvelle ligne.
+</p>
+
+<p>
+Voici un exemple ci-dessous avec son rendu.
+</p>
+
+<p>
+<b>Texte</b> :
+</p>
+
+<p class='ignore'>
+Voici une liste à puces :
+</p>
+
+<p class='ignore'>
+¤ul¤
+</p>
+
+<p class='ignore'>
+C++
+</p>
+
+<p class='ignore'>
+javascript
+</p>
+
+<p class='ignore'>
+java
+</p>
+
+<p class='ignore'>
+python
+</p>
+
+<p class='ignore'>
+¤
+</p>
+
+<p class='ignore'>
+Et une liste numérotée :
+</p>
+
+<p class='ignore'>
+¤ol¤
+</p>
+
+<p class='ignore'>
+linked lists
+</p>
+
+<p class='ignore'>
+binary trees
+</p>
+
+<p class='ignore'>
+hash tables
+</p>
+
+<p class='ignore'>
+queues
+</p>
+
+<p class='ignore'>
+stacks
+</p>
+
+<p class='ignore'>
+¤
+</p>
+
+<p>
+<b>Rendu</b> :
+</p>
+
+<p>
+Voici une liste à puces :
+</p>
+
+<ul>
+<li>C++</li>
+<li>javascript</li>
+<li>java</li>
+<li>python</li>
+</ul>
+
+<p>
+Et une liste numérotée :
+</p>
+
+<ol>
+<li>linked lists</li>
+<li>binary trees</li>
+<li>hash tables</li>
+<li>queues</li>
+<li>stacks</li>
+</ol>
+
+<hr>
+<h2>Code</h2>
+<p>
+Des extraits de code préformaté peuvent être représentés par la balise <span class='cs'>¤fc¤</span> fermée simplement par <span class='cs'>¤</span> . La coloration syntaxique prend en charge seulement les mots clés de C++ et de javascript ainsi que les commentaires. Il est toutefois possible d'ajouter une coloration syntaxique pour les désignations de type par l'indication <span class='cs'>¤t</span> et pour les noms de méthodes ou fonctions par l'indication <span class='cs'>¤m</span>.
+</p>
+
+<p>
+Les indications <span class='cs'>¤t</span> et <span class='cs'>¤m</span> doivent obligatoirement apparaître directement en début de ligne et sont suivies des noms pour lesquels on veut une coloration.
+</p>
+
+<p>
+Voici un exemple ci-dessous avec son rendu.
+</p>
+
+<p>
+<b>Texte</b> :
+</p>
+
+<p class='ignore'>
+¤fc¤
+</p>
+
+<p class='ignore'>
+¤t  A  PM  int
+</p>
+
+<p class='ignore'>
+¤m  meth   m
+</p>
+
+<p class='ignore'>
+A a; /* a est une instance d'une classe A */
+</p>
+
+<p class='ignore'>
+// PM = type "pointeur vers une méthode de A" (retournant void et de paramètre int).
+</p>
+
+<p class='ignore'>
+using PM = void(A::*)(int);
+</p>
+
+<p class='ignore'>
+// la variable m contient l'adresse de la méthode meth, m est un pointeur vers A::meth(int)
+</p>
+
+<p class='ignore'>
+PM m = &A::meth;
+</p>
+
+<p class='ignore'>
+// appel de la méthode en déréférençant le pointeur de méthode.
+</p>
+
+<p class='ignore'>
+(a.*m)(7);
+</p>
+
+<p class='ignore'>
+¤
+</p>
+
+<p>
+<b>Rendu</b> :
+</p>
+<pre class='fc'><span class='t'>A</span> a; <span class='cmt'>/* a est une instance d'une classe A */</span><br><span class='cmt'>// PM = type "pointeur vers une méthode de A" (retournant void et de paramètre int).</span><br><span class='k'>using</span> <span class='t'>PM</span> = <span class='k'>void</span>(<span class='t'>A</span>::*)(<span class='t'>int</span>);<br><span class='cmt'>// la variable m contient l'adresse de la méthode meth, m est un pointeur vers A::meth(int)</span><br><span class='t'>PM</span> <span class='m'>m</span> = &<span class='t'>A</span>::<span class='m'>meth</span>;<br><span class='cmt'>// appel de la méthode en déréférençant le pointeur de méthode.</span><br>(a.*<span class='m'>m</span>)(7);<br></pre>
+
+<hr>
+<h2>Images</h2>
+<p>
+Pour insérer une image on utilisera la balise <span class='cs'>¤img¤</span> ainsi : <span class='cs'>¤img¤source de l'image¤[classe css]¤</span> .
+</p>
+
+<p>
+<b>Texte</b> :
+</p>
+
+<p class='ignore'>
+Image insérée avec css (¤cs¤vertical-align: middle¤cs¤) : <span class='cs'>¤img¤./img/ns.svg¤t-img¤</span> ou encore sans : <span class='cs'>¤img¤./img/ns.svg¤¤</span> .
+</p>
+
+<p>
+<b>Rendu</b> :
+</p>
+
+<p>
+Image insérée avec css (<span class='cs'>vertical-align: middle</span>) :  <img src='./img/ns.svg' alt='no alt' class='t-img'> ou encore sans : <img src='./img/ns.svg' alt='no alt'> .
+</p>
+
+<hr>
+<h2>Entêtes</h2>
+<p>
+<b>Texte</b> :
+</p>
+
+<p class='ignore'>
+¤h1¤Header 1
+</p>
+
+<p class='ignore'>
+¤h2¤Header 2
+</p>
+
+<p class='ignore'>
+¤h3¤Header 3
+</p>
+
+<p>
+<b>Rendu</b> :
+</p>
+
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+      </div>
+    </div>)
+    <footer>
+    </footer>
+  </body>
+</html>
