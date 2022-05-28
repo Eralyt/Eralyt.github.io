@@ -1,10 +1,9 @@
 let lastSelected = null;
 let topics = document.querySelector(".tw1").children[1].querySelectorAll("li");
-let paragraphes = document.querySelector(".sections").querySelectorAll(".section");
+let paragraphes = document.querySelector(".sections").querySelectorAll("section");
 let startTop = document.querySelector('.sections').offsetTop;
-console.log(paragraphes[paragraphes.length - 1].clientHeight);
-console.log(window.innerHeight);
-document.querySelector('.cw1').style.marginBottom = window.innerHeight - paragraphes[paragraphes.length - 1].clientHeight - 55 + "px";
+if (paragraphes.length != 0)
+    document.querySelector('.cw1').style.marginBottom = window.innerHeight - paragraphes[paragraphes.length - 1].clientHeight - 55 + "px";
 
 window.addEventListener('scroll', () => {
     let current = "";
