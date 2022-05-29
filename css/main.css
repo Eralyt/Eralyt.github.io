@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'zen_kurenaidoregular';
+    src: url('./fonts/zenkurenaido-regular-webfont.woff2') format('woff2'),
+         url('./fonts/zenkurenaido-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 html {
     background: url("../img/checker.png") fixed;
     scroll-behavior: smooth;
@@ -30,6 +38,16 @@ body {
     border-radius: 8px;
     box-shadow: rgb(0 0 0 / 20%) 0 0 0 1px, rgb(0 0 0 / 45%) 0px 2px 10px;
  
+}
+
+.nw1 .logoe {
+  border-top: double 3px #aeaeae;
+  width: 200px;
+  border-bottom: double 3px #aeaeae;
+}
+
+.nw1 > div {
+  padding:25px;
 }
 
 .tw1 {
@@ -92,6 +110,7 @@ footer {
     overflow: hidden;
     font-weight: 600;
     font-size: 0.85em;
+    letter-spacing: 0.15em;
 }
 
 footer p {

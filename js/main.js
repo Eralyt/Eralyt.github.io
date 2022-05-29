@@ -28,3 +28,4 @@ window.addEventListener('scroll', () => {
         if (lastSelected) lastSelected.classList.remove('active');
     }
 })
+
