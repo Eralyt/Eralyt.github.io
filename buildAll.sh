@@ -1,9 +1,0 @@
-./2html algorithmes.2html
-./2html C++.2html
-./2html css.2html
-./2html html.2html
-./2html index.2html
-./2html javascript.2html
-./2html nodejs.2html
-./2html react.2html
-./2html 2html-doc.2html
