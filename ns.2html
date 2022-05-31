@@ -1,0 +1,13 @@
+title ÉRALYT Ns Library
+h1 Ns Library
+h1s Une bibliothèque C++ écrite à des fins pédagogiques
+
+¤h2s¤Ns
+`Ns Library` est une bibliothèque écrite à des fins pédagogiques pour apprendre le C++.
+On trouvera:
+¤ul¤
+des templates de création d'un mécanisme de `Signaux & Slots` :  on connecte un signal à un slot (une fonction ou une méthode d'une instance d'une classe) et lors de l'émission du signal, le slot est exécuté avec le(s) paramètre(s) transmis par le signal.
+un `parser JSON` : parse un objet JSON en format texte pour l'interpréter en un objet, instance de la classe `JsonValue`, manipulable en C++.
+¤
+
+¤hr¤
