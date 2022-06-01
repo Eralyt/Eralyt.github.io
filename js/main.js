@@ -1,6 +1,6 @@
 // à remplacer par l'adresse de publication du site https://eralit.github.io ou https://eralyt.com
-const root = "/media/vincent/Niusha/Freelance/site/dist";
-//const root = "https://eralyt.github.io";
+//const root = "/media/vincent/Niusha/Freelance/site/dist";
+const root = "https://eralyt.github.io";
 
 const hlogo = document.querySelector('.hlogo');
 const svg = document.querySelector('.logoe');
