@@ -1,6 +1,6 @@
 // à remplacer par l'adresse de publication du site https://eralit.github.io ou https://eralyt.com
-//const root = "/media/vincent/Niusha/Freelance/site/dist";
-const root = "https://eralyt.github.io";
+const root = "/media/vincent/Niusha/Freelance/site/dist";
+//const root = "https://eralyt.github.io";
 
 const hlogo = document.querySelector('.hlogo');
 const svg = document.querySelector('.logoe');
@@ -64,6 +64,10 @@ const navGithub = [
     { name: "NsLibrary", link: "/content/Ns/ns.html", childs: null }
 ]
 
+const navDivers = [
+    { name: "liens utiles", link: "/content/divers/liens.html", childs: null }
+]
+
 function createNavigation(items) {
     let menu = document.createElement("div");
     menu.classList.add("menu-items");
@@ -89,3 +93,5 @@ addSeparator("Programmation");
 createNavigation(navProgItems);
 addSeparator("Sur GitHub");
 createNavigation(navGithub);
+addSeparator("Divers");
+createNavigation(navDivers);
